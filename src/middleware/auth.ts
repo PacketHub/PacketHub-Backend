@@ -61,3 +61,5 @@ module.exports = {
   requireAuth,
   requireRole,
 };
+
+export {}

@@ -162,3 +162,5 @@ router.post("/conversations/:id/messages", requireAuth, async (req, res) => {
 });
 
 module.exports = router;
+
+export {}

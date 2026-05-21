@@ -276,3 +276,5 @@ router.patch("/email", requireAuth, async (req, res) => {
 });
 
 module.exports = router;
+
+export {}

@@ -2,11 +2,12 @@
   "name": "packethub-backend",
   "version": "0.1.0",
   "description": "Beginner-friendly IT forum backend powered by Express.js and PostgreSQL.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -17,6 +18,13 @@
     "pg": "^8.11.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.10.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
   }
 }

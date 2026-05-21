@@ -68,3 +68,5 @@ router.delete("/posts/:id/votes", requireAuth, async (req, res) => {
 });
 
 module.exports = router;
+
+export {}

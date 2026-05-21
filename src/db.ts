@@ -151,3 +151,5 @@ async function initDb() {
 }
 
 module.exports = { pool, initDb };
+
+export {}

@@ -1,6 +1,6 @@
 # PacketHub Backend
 
-PacketHub is a beginner-friendly IT forum backend built with Express.js and PostgreSQL. This backend is designed to support the documented API routes for authentication, profiles, posts, comments, voting, conversations, and admin management.
+PacketHub is a beginner-friendly IT forum backend built with Express.js, TypeScript, and PostgreSQL. This backend is designed to support the documented API routes for authentication, profiles, posts, comments, voting, conversations, and admin management.
 
 ## Setup
 

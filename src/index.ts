@@ -54,3 +54,5 @@ initDb()
     console.error("Failed to initialize database:", error);
     process.exit(1);
   });
+
+export {}

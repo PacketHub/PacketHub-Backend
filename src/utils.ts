@@ -40,3 +40,5 @@ module.exports = {
   generateRandomToken,
   getRefreshTokenExpiry,
 };
+
+export {}

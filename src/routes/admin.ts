@@ -124,3 +124,5 @@ router.get("/role-audit-log", requireRole("admin"), async (req, res) => {
 });
 
 module.exports = router;
+
+export {}
