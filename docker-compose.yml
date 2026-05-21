@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: packethub-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: packethub
+      POSTGRES_PASSWORD: packethub_password
+      POSTGRES_DB: packethub
+    ports:
+      - "5432:5432"
+    volumes:
+      - packethub-db-data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: packethub-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://packethub:packethub_password@db:5432/packethub
+      PORT: 4000
+      NODE_ENV: development
+      JWT_SECRET: supersecretdevkey
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run dev
+
+volumes:
+  packethub-db-data:
